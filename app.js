@@ -16,6 +16,8 @@ var session = require('express-session');
 var FileStore = require('session-file-store')(session);
 // Config
 var config = require('./config');
+// Passport
+const passport = require('passport');
 
 // Routes
 var indexRouter = require('./routes/index');
@@ -24,7 +26,6 @@ var dishRouter = require('./routes/dishRouter');
 var promoRouter = require('./routes/promoRouter');
 var leaderRouter = require('./routes/leaderRouter');
 var uploadRouter = require('./routes/uploadRouter');
-const passport = require('passport');
 
 // Mongodb URL connection
 const urldb = config.mongoUrl;
